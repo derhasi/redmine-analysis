@@ -1,4 +1,5 @@
 var redmine = require('./lib/redmine');
+var redmineIssue = require('./lib/redmine-issue');
 var config = require('./config.json');
 
 var r = new redmine(config.host, config.port, config.key);
@@ -17,9 +18,9 @@ r.getAll('issues', {project_id: projectId}, function(err, data) {
   for (var i in data) {
     var d = data[i];
 
-    r.getSingle('issue', d.id, {include: 'journals'}, function(err, issue) {
+    r.getIssue(d.id, function(err, issue) {
+      console.log(issue.id + ' - Status: ' + issue.getStatus(Date.now()));
       issues.push(issue);
-      console.log('Fetched:', issue.project.name, issue.id);
     });
   }
 });
