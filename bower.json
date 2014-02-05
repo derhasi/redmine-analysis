@@ -1,7 +1,7 @@
 {
-  "name": "pm-analysis",
-  "main": "index.js",
-  "version": "0.0.0",
+  "name": "redmine-analysis",
+  "main": "app/scripts/app.js",
+  "version": "0.1.0",
   "homepage": "https://github.com/derhasi/redmine-analysis",
   "authors": [
     "Johannes Haseitl <johannes@undpaul.de>"
@@ -16,6 +16,9 @@
     "tests"
   ],
   "dependencies": {
-    "rickshaw": "~1.4.6"
+    "angular": "1.2.6",
+    "rickshaw": "~1.4.6",
+    "es5-shim": "~2.3.0",
+    "json3": "~3.3.0"
   }
 }
