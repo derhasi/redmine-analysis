@@ -61,6 +61,19 @@ redmineIssue.getAll(r, {project_id: projectId}, function(err, issues) {
       }
     }
 
-    console.log('Series', series);
+    var rickshawSeries = [];
+
+    // Restructure data to rickshaw series.
+    for (var status in series) {
+
+      var data = [];
+
+      for (var day in series[status]) {
+        data.push({x: day, y: series[status][day]});
+      }
+      rickshawSeries.push({data: data});
+    }
+
+    console.log('Series', rickshawSeries);
   });
 });
