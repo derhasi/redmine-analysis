@@ -1,7 +1,7 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if lt IE 7]>      <html class="no-javascripts lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-javascripts lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-javascripts lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
@@ -12,7 +12,7 @@
     <link type="text/css" rel="stylesheet" href="bower_components/rickshaw/src/css/graph.css">
     <link type="text/css" rel="stylesheet" href="bower_components/rickshaw/src/css/detail.css">
     <link type="text/css" rel="stylesheet" href="bower_components/rickshaw/src/css/legend.css">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="stylesheets/main.css">
     <!-- endbuild -->
   </head>
   <body ng-app="redmineAnalysisApp">
@@ -23,13 +23,13 @@
     <div class="container" ng-include="'views/main.html'" ng-controller="MainCtrl"></div>
 
     <!--[if lt IE 9]>
-    <script src="bower_components/es5-shim/es5-shim.js"></script>
-    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <script src="bower_components/es5-shim/es5-shim.javascripts"></script>
+    <script src="bower_components/json3/lib/json3.min.javascripts"></script>
     <![endif]-->
 
     <script src="bower_components/angular/angular.js"></script>
-    <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/main.js"></script>
+    <script src="javascripts/app.js"></script>
+    <script src="javascripts/controllers/main.js"></script>
 
   </body>
 </html>

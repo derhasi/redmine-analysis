@@ -1,6 +1,6 @@
 {
   "name": "redmine-analysis",
-  "main": "app/scripts/app.js",
+  "main": "app/javascripts/app.javascripts",
   "version": "0.1.0",
   "homepage": "https://github.com/derhasi/redmine-analysis",
   "authors": [
