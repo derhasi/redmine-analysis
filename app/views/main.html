@@ -1,36 +1,17 @@
-<div class="header">
-  <ul class="nav nav-pills pull-right">
-    <li class="active"><a ng-href="#">Home</a></li>
-    <li><a ng-href="#">About</a></li>
-    <li><a ng-href="#">Contact</a></li>
-  </ul>
-  <h3 class="text-muted">pm analysis</h3>
-</div>
+<div class="main">
+  <h1>redmine Analysis</h1>
 
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
-</div>
+  <form>
+    <input ng-model="host" placeholder="Host"></input>
+    <input ng-model="port" placeholder="Port"></input>
+    <input ng-model="apikey" placeholder="API Key"></input>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
+    <select ng-if="redmine" ng-model="project" ng-options="p.id for p in projects">
+      <option value="">-- choose project --</option>
+    </select>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
+    <a ng-if="host && port && apikey && !redmine" ng-click="connect()">Connect</a>
+    <a ng-if="redmine" ng-click="retrieve()">Retrieve</a>
+  </form>
 
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-</div>
-
-<div class="footer">
-  <p>♥ from the Yeoman team</p>
 </div>
