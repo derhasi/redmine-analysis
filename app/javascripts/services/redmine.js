@@ -1,10 +1,9 @@
 
-angular.module('redmineAnalysisApp', [])
-  .factory('redmine', ['$http', function redmineFactory($http) {
+redmineAnalysis.factory('redmine', ['$http', function redmineFactory($http) {
 
 
   var redmine = function(host, port, authkey) {
-    this.url = host + ':' + port;
+    this.url = 'http://' + host + ':' + port;
     this.authKey = authkey;
     this.statuses = {};
   }
@@ -14,12 +13,13 @@ angular.module('redmineAnalysisApp', [])
     // Add authkey.
     query.key = this.authKey;
 
+    var url = this.url + '/' + path + '.json';
+
     var options = {
-      url: this.url + '/' + path + '.json',
       params: query
     };
 
-    $http.get(options)
+    $http.get(url, options)
       .success(function(data, status, headers, config) {
         console.log(data);
       })
@@ -122,4 +122,5 @@ angular.module('redmineAnalysisApp', [])
     });
   }
 
+  return redmine;
 }]);

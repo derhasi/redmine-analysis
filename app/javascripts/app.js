@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('redmineAnalysisApp', []);
+var redmineAnalysis = angular.module('redmineAnalysisApp', []);
